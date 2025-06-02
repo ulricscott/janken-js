@@ -11,7 +11,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function playGame(playerChoice) {
-
+  resultDisplay.classList.remove("greenText", "redText", "win-flicker", "lose-flicker");
   const computerChoice = choices[Math.floor(Math.random() * 3)];
 
   let result = "";
@@ -37,16 +37,14 @@ function playGame(playerChoice) {
   computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
   resultDisplay.textContent = result;
 
-  resultDisplay.classList.remove("greenText", "redText");
-
   switch(result) {
     case "YOU WIN!":
-      resultDisplay.classList.add("greenText");
+      resultDisplay.classList.add("greenText", "win-flicker");
       playerScore++;
       playerScoreDisplay.textContent = playerScore;
       break;
     case "YOU LOSE!":
-      resultDisplay.classList.add("redText");
+      resultDisplay.classList.add("redText", "lose-flicker");
       computerScore++;
       computerScoreDisplay.textContent = computerScore;
       break;

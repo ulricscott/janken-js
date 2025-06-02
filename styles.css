@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Press Start 2P', monospace;
+  background: #0f0f23;
+  color: #00ffff;
+  text-shadow: 0 0 10px currentColor;
   font-weight: bold;
   margin: 0;
   display: flex;
@@ -8,8 +13,8 @@ body {
 }
 
 h1 {
-  font-size: 3.5rem;
-  color: hsl(0, 0%, 20%);
+  font-size: 6rem;
+  color: #ffd700;
 }
 
 .choices {
@@ -21,14 +26,17 @@ h1 {
    min-width: 160px;
    margin: 0 10px;
    border-radius: 250px;
-   background-color: hsl(200, 100%, 40%);
+   background-color: #ff1493;
    cursor: pointer;
    transition: background-color 0.5s ease;
    pointer-events: auto;
+   border: 3px solid #39ff14;
+   transition: all 0.3s steps(4); /* 4 discrete steps instead of smooth */
 }
 
 .choices button:hover {
-  background-color: hsl(200, 100%, 70%);
+  background-color: #1e90ff;
+  transform: scale(1.1);
 }
 
 #playerDisplay, #computerDisplay {
@@ -50,4 +58,20 @@ h1 {
 
 .redText, #computerScoreDisplay {
   color: hsl(0, 84%, 60%)
+}
+
+@keyframes intense-flicker {
+  0%, 100% { opacity: 1; }
+  5% { opacity: 0.1; }    /* Much darker */
+  10% { opacity: 0.9; }
+  15% { opacity: 0.2; }   /* Very dark */
+  20% { opacity: 1; }
+  25% { opacity: 0.05; }  /* Almost invisible */
+  30% { opacity: 0.8; }
+  35% { opacity: 0.3; }
+  40% { opacity: 1; }
+}
+
+.win-flicker, .lose-flicker {
+  animation: intense-flicker 0.6s ease-in-out 3;
 }
