@@ -2,6 +2,8 @@
 
 A simple, interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript where you can play against the computer.
 
+In Japan, "janken" (ジャンケン) refers to the game of Rock Paper Scissors. It's a widely used method for resolving disagreements or determining order in various situations, both formally and informally. The term "janken" is also the name of a specific variation of the sansukumi-ken game, which is the origin of the modern rock paper scissors. 
+
 ## 🎮 Features
 
 - **Interactive Gameplay**: Click buttons to make your choice
@@ -36,7 +38,7 @@ A simple, interactive Rock Paper Scissors game built with HTML, CSS, and JavaScr
 ## 📁 Project Structure
 
 ```
-rock-paper-scissors/
+janken-js/
 ├── index.html          # Main HTML file
 ├── index.js           # Game logic and functionality
 ├── styles.css         # Styling and layout
